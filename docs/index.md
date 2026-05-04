@@ -28,7 +28,7 @@ CatLang — эзотерический язык, в котором каждая 
 
 ## 2. Грамматика языка (EBNF)
 
-```ebnf
+ebnf
 program    = { definition | expression } ;
 
 definition = ("meow" | "play_again!") identifier "0.0" lambda "nya" ;
