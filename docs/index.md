@@ -224,38 +224,42 @@ listen:3	Unit -> Int	Читает целое число с клавиатуры	
 Нет стандартной библиотеки — доступны только встроенные операторы
 
 ## 9. Сравнение с другими языками
-Конструкция	CatLang	F#	Haskell
-Определение функции	meow f 0.0 cat_game x -> b nya	let f x = b	f x = b
-Рекурсивная функция	play_again! f 0.0 cat_game x -> b nya	let rec f x = b	f x = b
-Условие	UwU c happy:) t OwO e	if c then t else e	if c then t else e
-Применение	f please x	f x	f x
-Лямбда	cat_game x -> x :) 1	fun x -> x + 1	\x -> x + 1
-Список	1 :: 2 :: hug()	[1; 2]	[1, 2]
-Pattern matching	two_halves:3 ... love>.<	match ... with	case ... of
-Вывод	say:3 x	printfn "%A" x	print x
+
+| Конструкция | CatLang | F# | Haskell |
+|-------------|---------|----|---------|
+| Определение функции | `meow f 0.0 cat_game x -> b nya` | `let f x = b` | `f x = b` |
+| Рекурсивная функция | `play_again! f 0.0 cat_game x -> b nya` | `let rec f x = b` | `f x = b` |
+| Условие | `UwU c happy:) t OwO e` | `if c then t else e` | `if c then t else e` |
+| Применение | `f please x` | `f x` | `f x` |
+| Лямбда | `cat_game x -> x :) 1` | `fun x -> x + 1` | `\x -> x + 1` |
+| Список | `1 :: 2 :: hug()` | `[1; 2]` | `[1, 2]` |
+| Pattern matching | `two_halves:3 ... love>.<` | `match ... with` | `case ... of` |
+| Вывод | `say:3 x` | `printfn "%A" x` | `print x` |
 
 ## 10. Архитектура интерпретатора
 Интерпретатор реализован как tree-walk interpreter — обходит AST и вычисляет значения напрямую.
 
 ### 10.1. Структура проекта
-text
+
+```
 cutelang/
 ├── src/
-│   ├── Ast.fs              # Абстрактное синтаксическое дерево (Expr, Pattern, BinOp)
-│   ├── Value.fs            # Типы значений времени выполнения (VInt, VBool, VClosure, VRecClosure, VList)
-│   ├── Parser.fs           # Парсер на FParsec (исходный код → AST)
-│   ├── Interpreter.fs      # Интерпретатор (функция eval с окружением)
-│   └── Program.fs          # Точка входа (чтение файла, парсинг, запуск eval)
+│   ├── Ast.fs              # AST (Expr, Pattern, BinOp)
+│   ├── Value.fs            # Типы значений (VClosure, VList)
+│   ├── Parser.fs           # Парсер на FParsec
+│   ├── Interpreter.fs      # eval с окружением
+│   └── Program.fs          # Точка входа
 ├── examples/
 │   ├── fact.cat            # Факториал
 │   ├── fib.cat             # Числа Фибоначчи
-│   ├── map.cat             # Map над списком
-│   ├── lists.cat           # Работа со списками
+│   ├── map.cat             # Map
+│   ├── lists.cat           # Списки
 │   ├── match.cat           # Pattern matching
-│   └── simple_math.cat     # Арифметические операции
+│   └── simple_math.cat     # Арифметика
 ├── CatLang.fsproj          # Проект F# (.NET 8.0)
 ├── .gitignore
 └── README.md
+```
 
 ### 10.2. Модули
 Модуль	Файл	Назначение
