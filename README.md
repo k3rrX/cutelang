@@ -193,21 +193,24 @@ nya
 
 ## 🏛️ Архитектура
 ```
-src/
-├── Ast.fs          # Абстрактное синтаксическое дерево
-├── Value.fs        # Типы значений (VClosure, VRecClosure, VList)
-├── Parser.fs       # Парсер на FParsec
-├── Interpreter.fs  # Интерпретатор (eval/apply)
-├── Program.fs      # Точка входа
-└── CatLang.fsproj  # Проект F# (.NET 8.0)
-
-examples/
-├── fact.cat        # Факториал
-├── fib.cat         # Числа Фибоначчи
-├── map.cat         # Map над списком
-├── lists.cat       # Работа со списками
-├── match.cat       # Pattern matching
-└── simple_math.cat # Арифметика
+cutelang/
+├── src/
+│ ├── Ast.fs             # Абстрактное синтаксическое дерево
+│ ├── Value.fs           # Типы значений (VClosure, VRecClosure, VList)
+│ ├── Parser.fs          # Парсер на FParsec
+│ ├── Interpreter.fs     # Интерпретатор (eval/apply)
+│ └── Program.fs         # Точка входа
+├── examples/
+│ ├── fact.cat           # Факториал
+│ ├── fact_and_lists.cat # Факториал + списки
+│ ├── fib.cat            # Числа Фибоначчи
+│ ├── lists.cat          # Работа со списками
+│ ├── map.cat            # Map над списком
+│ ├── match.cat          # Pattern matching
+│ └── simple_math.cat    # Арифметика
+├── CatLang.fsproj       # Проект F# (.NET 8.0)
+├── .gitignore
+└── README.md
 ```
 
 📄 Лицензия
