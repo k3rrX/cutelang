@@ -90,9 +90,11 @@ UwU n smaller_cat 2
 | `listen:3` | Ввод с клавиатуры (read) |
 | `two_halves:3 ... love>.<` | Pattern matching |
 
-🚀 Быстрый старт
 
-git clone https://github.com/sparrUwU/cutelang.git
+## 🚀 Быстрый старт
+
+```bash
+git clone https://github.com/k3rrX/cutelang.git
 cd cutelang
 dotnet run -- examples/fact.cat
 dotnet test
@@ -160,19 +162,20 @@ two_halves:3 lst love>.<
 nya
 
 
-✨ Реализованные возможности
+## ✨ Реализованные возможности
 
-Возможность	Статус	Синтаксис
-Именованные привязки (let)	✅	meow x 0.0 ... nya
-Рекурсия	✅	play_again!
-Функции первого класса	✅	cat_game x ->
-Замыкания	✅	—
-Списки / Последовательности	✅	::, hug(), first_cat, last_cat
-Библиотечные функции списков	✅	first_cat, last_cat
-Pattern matching	✅	two_halves:3 ... love>.<
-Ввод-вывод	✅	say:3, listen:3
-Арифметические операции	✅	:), :(, :*, }:(
-Операции сравнения	✅	smaller_cat, bigger_cat, same_cats, not_same_cats
+| Возможность | Статус | Синтаксис |
+|-------------|--------|-----------|
+| Именованные привязки (let) | ✅ | `meow x 0.0 ... nya` |
+| Рекурсия | ✅ | `play_again!` |
+| Функции первого класса | ✅ | `cat_game x ->` |
+| Замыкания | ✅ | — |
+| Списки / Последовательности | ✅ | `::`, `hug()`, `first_cat`, `last_cat` |
+| Библиотечные функции списков | ✅ | `first_cat`, `last_cat` |
+| Pattern matching | ✅ | `two_halves:3 ... love>.<` |
+| Ввод-вывод | ✅ | `say:3`, `listen:3` |
+| Арифметические операции | ✅ | `:)`, `:(`, `:*`, `}:(` |
+| Операции сравнения | ✅ | `smaller_cat`, `bigger_cat`, `same_cats`, `not_same_cats` |
 
 
 🏛️ Архитектура
