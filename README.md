@@ -100,9 +100,11 @@ dotnet run -- examples/fact.cat
 dotnet test
 ```
 
-🎯 Примеры
+## 🎯 Примеры
 
-Факториал
+### Факториал
+
+`examples/fact.cat`
 
 play_again! factorial 0.0 cat_game n ->
     UwU n smaller_cat 2
@@ -114,7 +116,11 @@ say:3 (factorial please 5)
 
 Результат: 120
 
-Числа Фибоначчи
+---
+
+### Числа Фибоначчи
+
+`examples/fib.cat`
 
 play_again! fib 0.0 cat_game n ->
     UwU n smaller_cat 3
@@ -126,7 +132,11 @@ say:3 (fib please 6)
 
 Результат: 8
 
-Map
+---
+
+### Map
+
+`examples/map.cat`
 
 play_again! map 0.0 cat_game f lst ->
     two_halves:3 lst love>.<
@@ -141,26 +151,29 @@ say:3 (map please double please numbers)
 
 Результат: (2 :: 4 :: 6 :: 8 :: hug())
 
-Списки
+---
+
+### Списки
+
+`examples/lists.cat`
 
 meow mylist 0.0 (10 :: 20 :: 30 :: 40 :: hug()) nya
 
-say:3 (first_cat please mylist)    | 10
-say:3 (last_cat please mylist)     | (20 :: 30 :: 40 :: hug())
+say:3 (first_cat please mylist)
+say:3 (last_cat please mylist)
 
-Pattern Matching
+---
+
+### Pattern Matching
+
+`examples/match.cat`
 
 meow lst 0.0 (1 :: 2 :: 3 :: hug()) nya
 
 two_halves:3 lst love>.<
     | hug() -> say:3 "Empty list"
-    | h :: t -> 
-        say:3 "First:"
-        say:3 h
-        say:3 "Rest:"
-        say:3 t
+    | h :: t -> say:3 h
 nya
-
 
 ## ✨ Реализованные возможности
 
