@@ -97,7 +97,7 @@ UwU n smaller_cat 2
 git clone https://github.com/k3rrX/cutelang.git
 cd cutelang
 dotnet run -- examples/fact.cat
-dotnet test
+dotnet test```
 
 
 🎯 Примеры
